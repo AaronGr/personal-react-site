@@ -2,12 +2,17 @@ import React from 'react';
 
 import styles from './ContactSection.module.css';
 
-const ContactSection = () => {
-    return (
-        <section className={styles['contact-section']}>
+type ContactProps = JSX.IntrinsicElements["section"];
 
-        </section>
-    )
-};
+const ContactSection = React.forwardRef<HTMLElement, ContactProps> (
+    (props, ref) => {
+        return (
+            <section 
+                className={styles['contact-section']}
+                ref={ref}
+            >
+            </section>
+        )
+});
 
 export default ContactSection;
