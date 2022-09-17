@@ -23,6 +23,16 @@
     font-size: xx-large;
 }
 
+.nav-item-active {  
+    margin: 2rem 1rem;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
 .nav-item:hover {
+    cursor: pointer
+}
+
+.nav-item-active:hover {
     cursor: pointer
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { NavRefs } from '../../../models/Nav';
 
 import styles from './Navbar.module.css';
@@ -8,24 +8,50 @@ interface NavProps {
 }
 
 const Navbar: React.FC<NavProps> = (props) => {
+    const aboutRef = useRef(null);
+    const portfolioRef = useRef(null);
+    const contactRef = useRef(null);
+    const [activeNav, setActiveNav] = useState(aboutRef.current);
+
     const scrollToPortfolioHandler = () => {
+        setActiveNav(portfolioRef.current);
         props.navRefs.portfolioRef.current?.scrollIntoView({behavior: 'smooth'});
     }
 
     const scrollToContactHandler = () => {
+        setActiveNav(contactRef.current);
         props.navRefs.contactRef.current?.scrollIntoView({behavior: 'smooth'});
     }
 
     const scrollToAboutHandler = () => {
+        setActiveNav(aboutRef.current);
         props.navRefs.aboutRef.current?.scrollIntoView({behavior: 'smooth'});
     }
 
     return (
         <header className={styles.navbar}>
             <div className={styles['nav-items']}>
-                <nav onClick={scrollToAboutHandler} className={styles['nav-item']}>About Me</nav>
-                <nav onClick={scrollToPortfolioHandler} className={styles['nav-item']}>Portfolio</nav>
-                <nav onClick={scrollToContactHandler} className={styles['nav-item']}>Contact</nav>
+                <nav 
+                    ref={aboutRef} 
+                    id="about" 
+                    onClick={scrollToAboutHandler} 
+                    className={aboutRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                        About Me
+                </nav>
+                <nav 
+                    ref={portfolioRef} 
+                    id="portfolio" 
+                    onClick={scrollToPortfolioHandler} 
+                    className={portfolioRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                        Portfolio
+                </nav>
+                <nav 
+                    ref={contactRef} 
+                    id="contact" 
+                    onClick={scrollToContactHandler} 
+                    className={contactRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                        Contact
+                </nav>
             </div>
         </header>
     );
