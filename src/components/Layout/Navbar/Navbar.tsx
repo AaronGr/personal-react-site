@@ -23,9 +23,9 @@ const Navbar: React.FC<NavProps> = (props) => {
     return (
         <header className={styles.navbar}>
             <div className={styles['nav-items']}>
-                <span onClick={scrollToAboutHandler} className={styles['nav-item']}>About Me</span>
-                <span onClick={scrollToPortfolioHandler} className={styles['nav-item']}>Portfolio</span>
-                <span onClick={scrollToContactHandler} className={styles['nav-item']}>Contact</span>
+                <nav onClick={scrollToAboutHandler} className={styles['nav-item']}>About Me</nav>
+                <nav onClick={scrollToPortfolioHandler} className={styles['nav-item']}>Portfolio</nav>
+                <nav onClick={scrollToContactHandler} className={styles['nav-item']}>Contact</nav>
             </div>
         </header>
     );
