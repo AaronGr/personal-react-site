@@ -1,7 +1,37 @@
 .about-section {
     width: 100vw;
     height: 100vh;
-    background-image: url("../../../images/cliffs-coast.jpg");
+    background-image: url("../../../images/lake-pic.jpg");
     background-color: #cccccc;
     background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    width: 75%;
+    height: 65%;
+    border-radius: 30px;
+    color: white;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.about-text {
+    width: 55%;
+    height: 100%;
+}
+
+.headshot {
+    width: 40%;
+    height: 100%;
+}
+
+.headshot img {
+    max-width: 100%;
+    max-height: 100%; 
 }
