@@ -35,21 +35,21 @@ const Navbar: React.FC<NavProps> = (props) => {
                     ref={aboutRef} 
                     id="about" 
                     onClick={scrollToAboutHandler} 
-                    className={aboutRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={aboutRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
                         About Me
                 </nav>
                 <nav 
                     ref={portfolioRef} 
                     id="portfolio" 
                     onClick={scrollToPortfolioHandler} 
-                    className={portfolioRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={portfolioRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
                         Portfolio
                 </nav>
                 <nav 
                     ref={contactRef} 
                     id="contact" 
                     onClick={scrollToContactHandler} 
-                    className={contactRef.current === activeNav ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={contactRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
                         Contact
                 </nav>
             </div>

@@ -1,8 +1,10 @@
 .portfolio-section {
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
     background-image: url("../../../images/buildings.jpg");
     background-color: #cccccc;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
