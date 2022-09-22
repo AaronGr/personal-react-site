@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from './ContactForm';
 
 import styles from './ContactSection.module.css';
 
@@ -11,6 +12,7 @@ const ContactSection = React.forwardRef<HTMLElement, ContactProps> (
                 className={styles['contact-section']}
                 ref={ref}
             >
+                <ContactForm />
             </section>
         )
 });

@@ -4,4 +4,7 @@
     background-image: url("../../../images/contact.jpg");
     background-color: #cccccc;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

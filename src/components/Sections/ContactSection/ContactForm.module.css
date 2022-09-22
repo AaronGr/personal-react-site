@@ -1,0 +1,7 @@
+.email-form {
+    z-index: 3;
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 50%;
+}
