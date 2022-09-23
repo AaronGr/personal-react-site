@@ -11,7 +11,7 @@ const Navbar: React.FC<NavProps> = (props) => {
     const aboutRef = useRef(null);
     const portfolioRef = useRef(null);
     const contactRef = useRef(null);
-    const [activeNav, setActiveNav] = useState(aboutRef.current);
+    const [activeNav, setActiveNav] = useState(null);
 
     const scrollToPortfolioHandler = () => {
         setActiveNav(portfolioRef.current);
@@ -28,6 +28,7 @@ const Navbar: React.FC<NavProps> = (props) => {
         props.navRefs.aboutRef.current?.scrollIntoView({behavior: 'smooth'});
     }
 
+
     return (
         <header className={styles.navbar}>
             <div className={styles['nav-items']}>
@@ -35,21 +36,21 @@ const Navbar: React.FC<NavProps> = (props) => {
                     ref={aboutRef} 
                     id="about" 
                     onClick={scrollToAboutHandler} 
-                    className={aboutRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={aboutRef.current === activeNav && aboutRef.current != null ? styles['nav-item-active'] : styles['nav-item']}>
                         About Me
                 </nav>
                 <nav 
                     ref={portfolioRef} 
                     id="portfolio" 
                     onClick={scrollToPortfolioHandler} 
-                    className={portfolioRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={portfolioRef.current === activeNav && portfolioRef.current != null ? styles['nav-item-active'] : styles['nav-item']}>
                         Portfolio
                 </nav>
                 <nav 
                     ref={contactRef} 
                     id="contact" 
                     onClick={scrollToContactHandler} 
-                    className={contactRef.current === activeNav && !null ? styles['nav-item-active'] : styles['nav-item']}>
+                    className={contactRef.current === activeNav && contactRef.current != null ? styles['nav-item-active'] : styles['nav-item']}>
                         Contact
                 </nav>
             </div>
