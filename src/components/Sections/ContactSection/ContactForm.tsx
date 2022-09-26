@@ -47,13 +47,26 @@ const ContactForm = () => {
 
     const submitHandler = (event: FormEvent) => {
         event.preventDefault();
-        console.log(event);
+
+        if (!formIsValid) {
+            return;
+        }
         
        instance.post('/email', {
             name: nameValue,
             email: emailValue,
             message: messageValue
+        })
+        .then(response => {
+            console.log("Success!", response);
+        })
+        .catch(error =>{
+            throw error;
         }); 
+
+        resetName();
+        resetEmail();
+        resetMessage();
     };
 
     return (
