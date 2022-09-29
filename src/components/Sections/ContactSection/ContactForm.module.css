@@ -2,6 +2,32 @@
     z-index: 3;
     display: flex;
     flex-flow: column wrap;
-    width: 50%;
-    height: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 75%;
+}
+
+.contact-input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 75%;
+    margin: 1%;
+}
+
+.submit-btn {
+    border-radius: 20px;
+    height: 5%;
+    width: 14%;
+    background-color: black;
+    color: white;
+    margin-top: 1rem;
+}
+
+.contact-input label {
+    font-weight: bold;
+}
+
+.header {
+    margin-bottom: 2rem;
 }

@@ -71,33 +71,40 @@ const ContactForm = () => {
 
     return (
         <form onSubmit={submitHandler} className={styles["email-form"]}>
-            <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                placeholder="name" 
-                value={nameValue}
-                onChange={nameChangeHandler}
-                onBlur={nameBlurHandler}
-            />
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="email"
-                value={emailValue}
-                onChange={emailChangeHandler}
-                onBlur={emailBlurHandler}
-            />
-            <textarea 
-                rows={20}
-                id="message"
-                placeholder="email me"
-                value={messageValue}
-                onChange={messageChangeHandler}
-                onBlur={messageBlurHandler}
-            />
-            <button type="submit">Submit</button>
+            <h1 className={styles.header}>Contact Me</h1>
+            <div className={styles['contact-input']} >
+                <label>Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    value={nameValue}
+                    onChange={nameChangeHandler}
+                    onBlur={nameBlurHandler}
+                />
+            </div>
+            <div className={styles['contact-input']} >
+                <label>Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    value={emailValue}
+                    onChange={emailChangeHandler}
+                    onBlur={emailBlurHandler}
+                />
+            </div>
+            <div className={styles['contact-input']} >
+                <label>Message</label>
+                <textarea 
+                    rows={10}
+                    id="message"
+                    value={messageValue}
+                    onChange={messageChangeHandler}
+                    onBlur={messageBlurHandler}
+                />
+            </div>
+            <button className={styles["submit-btn"]} type="submit">Submit</button>
         </form>
     )
 };
