@@ -10,7 +10,7 @@ const ContactForm = () => {
     const {
         value: nameValue,
         isValid: nameIsValid,
-        hasError: nameHasError,
+        // hasError: nameHasError,
         valueChangeHandler: nameChangeHandler,
         inputBlurHandler: nameBlurHandler,
         reset: resetName
@@ -19,7 +19,7 @@ const ContactForm = () => {
     const {
         value: emailValue,
         isValid: emailIsValid,
-        hasError: emailHasError,
+        // hasError: emailHasError,
         valueChangeHandler: emailChangeHandler,
         inputBlurHandler: emailBlurHandler,
         reset: resetEmail
@@ -28,7 +28,7 @@ const ContactForm = () => {
     const {
         value: messageValue,
         isValid: messageIsValid,
-        hasError: messageHasError,
+        // hasError: messageHasError,
         textAreaChangeHandler: messageChangeHandler,
         textAreaBlurHandler: messageBlurHandler,
         reset: resetMessage
