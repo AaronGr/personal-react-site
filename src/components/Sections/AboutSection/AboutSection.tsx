@@ -9,14 +9,13 @@ type AboutProps = {
 
 const aboutParagraph = (
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas integer eget. Enim eu 
-        turpis egestas pretium aenean. Volutpat consequat mauris nunc congue. Id volutpat lacus 
-        laoreet non curabitur gravida arcu. Ac orci phasellus egestas tellus rutrum tellus. Nunc 
-        lobortis mattis aliquam faucibus purus. Sit amet consectetur adipiscing elit ut. Nunc sed 
-        id semper risus in. Gravida quis blandit turpis cursus in hac. Fermentum et sollicitudin 
-        ac orci phasellus egestas. Eu ultrices vitae auctor eu augue. Placerat duis ultricies lacus
-        sed turpis tincidunt id. Vitae justo eget magna fermentum iaculis. Nibh venenatis cras sed felis eget.
+        Thank you for visiting my website!  I have professional industry experience using multiple web technologies. 
+        I have worked with front-end frameworks such as React and Angular, as well as NodeJS and Spring for back-end. 
+        I am also well versed with AWS technologies including S3, EC2, ECS, RDS, and Lambda written in Python.  
+
+        When I'm not doing web development I enjoy playing my guitar or a good videogame.  
+        Below you will find some personal projects have worked on and a contact form if you would like to reach me.
+        Looking forward to hearing from you!
     </p>
 )
 
