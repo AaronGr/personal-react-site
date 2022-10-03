@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './PortfolioViewer.module.css';
 import reactMealsImg from '../../../../images/ReactMeals.png';
@@ -19,11 +19,31 @@ const views = [
 ] 
 
 const PortfolioViewer = () => {
+    const [currentViewIndex, setCurrentViewIndex] = useState(0);
+
+    const scrollToNextView = () => {
+        console.log(currentViewIndex);
+        if (currentViewIndex === views.length - 1) {
+            setCurrentViewIndex(0);
+        } else {
+            setCurrentViewIndex(currentViewIndex + 1);
+        }
+    };
+
+    const scrollToLastView = () => {
+        console.log(currentViewIndex);
+        if (currentViewIndex === 0) {
+            setCurrentViewIndex(views.length - 1);
+        } else {
+            setCurrentViewIndex(currentViewIndex - 1);
+        }
+    };
+
     return (
         <div className={styles.viewer}>
-            <button className={styles['viewer-btn']}>&lt;</button>
-            <View viewData={views[1]}/>
-            <button className={styles['viewer-btn']}>&gt;</button>
+            <button onClick={scrollToLastView} className={styles['viewer-btn']}>&lt;</button>
+            <View viewData={views[currentViewIndex]}/>
+            <button onClick={scrollToNextView} className={styles['viewer-btn']}>&gt;</button>
         </div>
     )
 };
