@@ -1,0 +1,21 @@
+.viewer {
+    display: flex;
+    width: 80%;
+    height: 60%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.viewer-btn {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+    margin: 2%;
+}
+
+.viewer-btn input {
+    height: 100%;
+    width: 100%;
+}
