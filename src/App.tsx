@@ -2,7 +2,7 @@ import AboutSection from "./components/Sections/AboutSection/AboutSection";
 import ContactSection from "./components/Sections/ContactSection/ContactSection";
 import Navbar from "./components/Layout/Navbar/Navbar";
 import PortfolioSection from "./components/Sections/PortfolioSection/PortfolioSection";
-import { UIEventHandler, useRef } from "react";
+import { useRef } from "react";
 import { NavRefs } from "./models/Nav";
 import useOnScreen from "./hooks/use-on-screen";
 
@@ -21,15 +21,10 @@ function App() {
     aboutRef
   }
 
-  const onScrollHandler: UIEventHandler<HTMLElement> = (event) => {
-    let rect = event.currentTarget.getBoundingClientRect();
-    console.log(rect);
-  };
-
   return (
     <>
       <Navbar navRefs={navRefs} isAboutVisible={aboutSectionVisible} isPortfolioVisible={portfolioSectionVisibile} isContactVisible={contactSectionVisibile} />
-      <AboutSection ref={aboutRef} onScrollHandler={onScrollHandler} />
+      <AboutSection ref={aboutRef} />
       <PortfolioSection ref={portfolioRef} />
       <ContactSection ref={contactRef} />
     </>

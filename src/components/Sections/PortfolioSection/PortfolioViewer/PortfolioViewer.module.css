@@ -10,4 +10,14 @@
 .viewer-btn {
     height: 100%;
     margin: 2%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+    margin: 2%;
+}
+
+.viewer-btn input {
+    height: 100%;
+    width: 100%;
 }

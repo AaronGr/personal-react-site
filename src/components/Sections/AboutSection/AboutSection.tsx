@@ -1,11 +1,9 @@
-import React, { UIEventHandler } from 'react';
+import React from 'react';
 
 import styles from './AboutSection.module.css';
 import headshot from '../../../images/circle-headshot.png';
 
-type AboutProps = {
-    onScrollHandler: UIEventHandler<HTMLElement>
-}
+type AboutProps = JSX.IntrinsicElements['section'];
 
 const aboutParagraph = (
     <p>
@@ -25,7 +23,6 @@ const AboutSection = React.forwardRef<HTMLElement, AboutProps> (
             <section 
                 className={styles['about-section']}
                 ref={ref}
-                onScroll={props.onScrollHandler}
             >
                 <div className={styles['about-content']}>
                     <div className={styles.headshot}>

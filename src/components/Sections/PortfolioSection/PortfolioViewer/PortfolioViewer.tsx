@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import styles from './PortfolioViewer.module.css';
 import reactMealsImg from '../../../../images/ReactMeals.png';
 import blogSiteImg from '../../../../images/blog-app.png';
+import leftArrowImg from '../../../../images/left-arrow.png';
+import rightArrowImg from '../../../../images/right-arrow.png';
 import View from './View';
 
 const views = [
@@ -41,9 +43,25 @@ const PortfolioViewer = () => {
 
     return (
         <div className={styles.viewer}>
-            <button onClick={scrollToLastView} className={styles['viewer-btn']}>&lt;</button>
+            <div className={styles['viewer-btn']}>
+                <input 
+                    onClick={scrollToLastView} 
+                    type="image" 
+                    className={styles['viewer-btn']}
+                    src={leftArrowImg} 
+                    alt="portfolio left arrow navigation"
+                />
+            </div>
             <View viewData={views[currentViewIndex]}/>
-            <button onClick={scrollToNextView} className={styles['viewer-btn']}>&gt;</button>
+            <div className={styles['viewer-btn']} >
+                <input 
+                    onClick={scrollToNextView} 
+                    type="image"
+                    className={styles['viewer-btn']}
+                    src={rightArrowImg}
+                    alt="portfolio right arrow navigation"
+                />
+            </div>
         </div>
     )
 };
