@@ -9,7 +9,7 @@
     width: 100%;
     background-color: black;
     z-index: 10;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .nav-items {
@@ -22,11 +22,13 @@
 .nav-item {
     margin: 2rem 1rem;
     font-size: xx-large;
+    font-weight: bolder;
 }
 
 .nav-item-active {  
     margin: 2rem 1rem;
     font-size: xx-large;
+    font-weight: bolder;
     text-decoration: underline;
 }
 

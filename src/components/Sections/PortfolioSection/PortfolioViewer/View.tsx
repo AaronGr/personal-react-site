@@ -13,6 +13,9 @@ const View: React.FC<ViewProps> = (props) => {
             <a href={props.viewData.href} target="_blank" rel="noreferrer">
                 <img src={props.viewData.imgSrc} alt={props.viewData.altTxt} />
             </a>
+            <div className={styles.description}>
+                <p>{props.viewData.description}</p>
+            </div>
         </div>
     ) 
 };

@@ -6,7 +6,11 @@
     align-items: center;
     width: 35%;
     height: 75%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.email-form h1 {
+    font-weight: 800;
 }
 
 .contact-input {
@@ -14,6 +18,7 @@
     flex-flow: column wrap;
     width: 75%;
     margin: 1%;
+    font-weight: bolder;
 }
 
 .submit-btn {

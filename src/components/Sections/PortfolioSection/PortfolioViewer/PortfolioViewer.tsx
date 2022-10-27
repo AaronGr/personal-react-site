@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import styles from './PortfolioViewer.module.css';
 import reactMealsImg from '../../../../images/ReactMeals.png';
@@ -11,12 +11,14 @@ const views = [
     {
         href: 'https://react-meals-web-app-2d01b.firebaseapp.com/',
         imgSrc: reactMealsImg,
-        altTxt: 'React Meals Web App'
+        altTxt: 'React Meals Web App',
+        description: 'Food ordering app created with React.'
     },
     {
         href: 'https://frozen-falls-37428.herokuapp.com/',
         imgSrc: blogSiteImg,
-        altTxt: 'Blog Web App' 
+        altTxt: 'Blog Web App',
+        description: 'Blog website created using EJS. Uses MongoDB to store blog posts.'
     }
 ] 
 

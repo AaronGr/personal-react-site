@@ -1,5 +1,6 @@
 export interface PortfolioViewData {
     href: string,
     imgSrc: string,
-    altTxt: string
+    altTxt: string,
+    description: string
 };

@@ -26,6 +26,16 @@
     height: 100%;
 }
 
+.about-text h1 {
+    font-family: 'Open Sans', sans-serif;    
+    font-weight: bold;
+}
+
+.about-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
 .headshot {
     width: 40%;
     height: 100%;
